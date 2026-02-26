@@ -1,16 +1,14 @@
-nilaiUjian = { nama: "Ahmad", nilai: {mtk: 85, ipa: 90, bing: 80, bi:80 } };
+nilaiUjian = [{ nama: "Ahmad", nilai: {mtk: 85, ipa: 90, bing: 80, bi:80 } },
+              { nama: "Ronald", nilai: {mtk: 80, ipa: 80, bing: 70, bi:80 } }];
 
-let {nama, nilai:{mtk, ipa, bing, bi}} = nilaiUjian;
+let [ahmad, ronald] = nilaiUjian;
 
-function totalNilai(nama, mtk, ipa, bing, bi){
+function totalNilai(ahmad){
+    let {nama, nilai:{mtk, ipa, bing, bi}} = ahmad;
     let total = mtk + ipa + bing + bi;
     let rataRata = total / 4;
-    return {total, rataRata};
+    return {nama,total, rataRata};
 }
-console.log(`Nama : ${nama}
-        MTK : ${mtk}
-        IPA : ${ipa}
-        BING : ${bing}
-        BI : ${bi}
-Total Nilai : ${totalNilai(nama, mtk, ipa, bing, bi).total}
-Rata-rata   : ${totalNilai(nama, mtk, ipa, bing, bi).rataRata}`);
+console.log(`Nama : ${totalNilai(ahmad).nama}
+Total Nilai  : ${totalNilai(ahmad).total}
+Rata-rata    : ${totalNilai(ahmad).rataRata}`);
