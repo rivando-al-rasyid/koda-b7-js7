@@ -7,8 +7,8 @@ function totalNilai(namaSiswa){
     let {nama, nilai:{mtk, ipa, bing, bi}} = namaSiswa;
     let total = mtk + ipa + bing + bi;
     let rataRata = total / 4;
-    return {nama,total, rataRata};
+    let hasil = console.log(`${nama} memiliki total nilai ${total} dan rata-rata ${rataRata}`);
+    return {hasil};
 }
-console.log(`Nama : ${totalNilai(ahmad).nama}
-Total Nilai  : ${totalNilai(ahmad).total}
-Rata-rata    : ${totalNilai(ahmad).rataRata}`);
+
+totalNilai(ronald);
