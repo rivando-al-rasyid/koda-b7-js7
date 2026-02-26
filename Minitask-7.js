@@ -3,8 +3,8 @@ nilaiUjian = [{ nama: "Ahmad", nilai: {mtk: 85, ipa: 90, bing: 80, bi:80 } },
 
 let [ahmad, ronald] = nilaiUjian;
 
-function totalNilai(ahmad){
-    let {nama, nilai:{mtk, ipa, bing, bi}} = ahmad;
+function totalNilai(namaSiswa){
+    let {nama, nilai:{mtk, ipa, bing, bi}} = namaSiswa;
     let total = mtk + ipa + bing + bi;
     let rataRata = total / 4;
     return {nama,total, rataRata};
